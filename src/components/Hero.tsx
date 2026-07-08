@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import slide1Img from '../assets/1.png';
 import slide2Img from '../assets/2.png';
@@ -31,7 +31,7 @@ export default function Hero() {
     setCurrent((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  const slideVariants = {
+  const slideVariants: Variants = {
     enter: (dir: number) => ({
       x: dir > 0 ? '100%' : '-100%',
       opacity: 0
