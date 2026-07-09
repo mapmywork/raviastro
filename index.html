@@ -23,6 +23,19 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18272875260/mrxtCOfmysUcEPzl14lE',
+            'event_callback': callback
+        });
+        return false;
+      }
+
       document.addEventListener('click', function(e) {
         var target = e.target;
         while (target && target.tagName !== 'A') {
@@ -30,7 +43,8 @@
         }
         if (target && target.href) {
           if (target.href.includes('wa.me') || target.href.includes('tel:')) {
-            gtag('event', 'conversion', {'send_to': 'AW-18272875260/mrxtCOfmysUcEPzIl4IE'});
+            e.preventDefault();
+            gtag_report_conversion(target.href);
           }
         }
       });
