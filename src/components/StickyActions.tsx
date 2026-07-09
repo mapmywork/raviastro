@@ -22,7 +22,7 @@ export default function StickyActions() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-          className="fixed bottom-0 left-0 w-full z-45 px-4 pb-4 lg:hidden grid grid-cols-2 gap-3 pointer-events-none"
+          className="fixed bottom-0 left-0 w-full z-50 px-4 pb-4 lg:hidden grid grid-cols-2 gap-3 pointer-events-none"
         >
           {/* Call Button */}
           <a

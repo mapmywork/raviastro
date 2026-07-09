@@ -310,7 +310,7 @@ export default function Services() {
                 <div className="h-52 overflow-hidden relative">
                   {/* Subtle golden screen */}
                   <div className="absolute inset-0 bg-gold bg-opacity-[0.05] z-10 mix-blend-color" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent z-15" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent z-20" />
                   <img
                     src={service.image}
                     alt={service.title}
