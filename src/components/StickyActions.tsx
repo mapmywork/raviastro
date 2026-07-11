@@ -7,10 +7,14 @@ export default function StickyActions() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show sticky actions when scrolled past the hero section (approx 400px)
-      setIsVisible(window.scrollY > 400);
+      // Show sticky actions when scrolled past 100px
+      setIsVisible(window.scrollY > 100);
     };
-    window.addEventListener('scroll', handleScroll);
+    
+    // Check initial scroll position
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -18,6 +22,7 @@ export default function StickyActions() {
     <AnimatePresence>
       {isVisible && (
         <motion.div
+          key="sticky-cta-mobile"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}

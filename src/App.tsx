@@ -12,7 +12,7 @@ import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import StickyActions from './components/StickyActions';
+import MobileCTA from './components/MobileCTA';
 
 export default function App() {
   return (
@@ -23,6 +23,9 @@ export default function App() {
 
       {/* Hero Landing Section */}
       <Hero />
+
+      {/* Mobile Static CTA */}
+      <MobileCTA />
 
       {/* Seamless Scrolling Marquee Ticker */}
       <Marquee />
@@ -59,9 +62,6 @@ export default function App() {
 
       {/* Disclaimer, Links, and Info Block Footer */}
       <Footer />
-
-      {/* Floating Call & WhatsApp Bottom Strip for Mobile */}
-      <StickyActions />
       
     </div>
   );
